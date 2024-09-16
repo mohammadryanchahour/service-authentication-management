@@ -14,8 +14,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(auth_router, prefix="/service/auth", tags=["auth"])
-app.include_router(token_router, prefix="/service/auth", tags=["token"])
+app.include_router(auth_router, prefix="/service/auth", tags=["Authentication Management"])
+app.include_router(token_router, prefix="/service/token", tags=["Token Management"])
 
 @app.get("/")
 def read_root():
@@ -23,4 +23,4 @@ def read_root():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host=settings.HOST, port=settings.PORT, reload=settings.RELOAD)
+    uvicorn.run("main:app", host=settings.HOST, port=settings.PORT, reload=settings.RELOAD)

@@ -11,5 +11,5 @@ class Token(BaseModel):
     token_type: TokenType
     user_id: str
     expires_at: datetime
-    created_at: datetime.now
+    created_at: datetime
     is_active: bool = True 

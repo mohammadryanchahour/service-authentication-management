@@ -13,8 +13,8 @@ class TokenService:
         self.algorithm = algorithm
         self.pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
         self.client = AsyncIOMotorClient(settings.MONGODB_URI)
-        self.db = self.client.get("auth")
-        self.token_collection = self.db.get('tokens')
+        self.db = self.client["auth"]
+        self.token_collection = self.db.get_collection('tokens')
 
     async def create_access_token(self, user_id: str) -> dict:
         """

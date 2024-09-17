@@ -1,7 +1,3 @@
-Got it! Here’s a revised `README.md` that reflects the three modules: Authentication, Token, and Session.
-
----
-
 # Authentication Service
 
 ## Overview

@@ -136,7 +136,3 @@ Contributions are welcome! Please follow the standard Git workflow and submit a 
 ### License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-Feel free to adjust any sections based on the specific details of your implementation or additional requirements.

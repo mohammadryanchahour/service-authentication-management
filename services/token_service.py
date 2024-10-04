@@ -136,3 +136,12 @@ class TokenService:
             return await self.validate_token(token, TokenType.password_reset_token)
         except Exception as e:
             raise e
+        
+    async def fetch_token_detail(self, token: str) -> dict:
+        try:
+            token_detail = await self.token_collection.find_one({"token": token})
+            if not token_detail:
+                raise ValueError("Invalid Token, doesnot exist!")
+            return token_detail
+        except Exception as e:
+            raise e

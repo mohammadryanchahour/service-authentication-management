@@ -1,7 +1,6 @@
 from typing import Optional
 from pydantic import BaseModel
 
-from helpers.enums import TokenType
 
 class LoginRequest(BaseModel):
     email: Optional[str] = ""
@@ -19,4 +18,7 @@ class LogoutRequest(BaseModel):
 
 class TokenRequest(BaseModel):
     user_id: str = ""
+
+class VerifyTokenRequest(BaseModel):
+    token: str = ""
 
